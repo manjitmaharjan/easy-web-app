@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  app:
+    image: web-app
+    container_name: web-app
+    network_mode: host
+    build: .
+    volumes:
+      #  - "./nginx/conf.d/:/etc/nginx/conf.d/"
+      - "./nginx/logs:/var/log/nginx"
+    #   - "./nginx/ssl:/etc/nginx/ssl"
+    restart: always
+    ports:
+      - 1122:80
+
