@@ -11,7 +11,7 @@ COPY . .
 
 #ARG configuration=production
 #RUN npm run build -- --configuration $configuration
-RUN ng build 
+#RUN ng build 
 # the base image for this is an alpine based nginx image
 FROM nginx:alpine
 # copy the build folder from react to the root of nginx (www)
