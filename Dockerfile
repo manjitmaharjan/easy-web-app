@@ -6,7 +6,6 @@ COPY package*.json ./
 # run dependencies
 RUN npm install
 # COPY all current dir content to working dir
-ENV PATH="./node_modules/.bin:$PATH"
 
 COPY . .
 
